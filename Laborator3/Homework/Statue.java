@@ -3,9 +3,9 @@ import java.time.LocalTime;
 import java.util.*;
 
 public class Statue extends Attraction implements Visitable {
-    private Map<DayOfWeek, TimeInterval<LocalTime>> timetable;
+    private Map<DayOfWeek, TimeInterval> timetable;
 
-    public Statue(String town, String statueName,String description,  Map<DayOfWeek, TimeInterval<LocalTime>> timetable) {
+    public Statue(String town, String statueName,String description,  Map<DayOfWeek, TimeInterval> timetable) {
         super(town,statueName, description);
         this.timetable = timetable;
     }
@@ -13,7 +13,7 @@ public class Statue extends Attraction implements Visitable {
 
 
     @Override
-    public Map<DayOfWeek, TimeInterval<LocalTime>> getVisitingTimetable() {
+    public Map<DayOfWeek, TimeInterval> getVisitingTimetable() {
         return timetable;
     }
 

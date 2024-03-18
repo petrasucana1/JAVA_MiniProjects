@@ -54,8 +54,13 @@ public class Trip implements Payable{
         List<Attraction> visitableAttractions= new ArrayList<>();
         for(Attraction attraction: attractions)
         {
-            if(attraction instanceof Visitable )
+            if(attraction instanceof Visitable ) {
+                LocalTime openingHour = ((Visitable) attraction).getOpeningHour(day);
+                // Verificăm dacă openingHour este null
+                if (openingHour != null) {
                     visitableAttractions.add(attraction);
+                }
+            }
         }
 
         visitableAttractions.sort((attraction1, attraction2) -> {
@@ -64,6 +69,18 @@ public class Trip implements Payable{
             return openingHour1.compareTo(openingHour2);
         });
 
+        return visitableAttractions;
+    }
+
+    public List<Attraction> sortByPopularity(DayOfWeek day){
+        List<Attraction> visitableAttractions= sortVisitableAttractions(day);
+        visitableAttractions.sort((attraction1, attraction2) -> {
+
+                int popularity1=attraction1.getPopularity();
+                int popularity2=attraction2.getPopularity();
+                return Integer.compare(popularity2,popularity1);
+
+            });
         return visitableAttractions;
     }
 

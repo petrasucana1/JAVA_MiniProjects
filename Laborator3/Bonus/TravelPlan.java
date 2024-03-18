@@ -40,7 +40,7 @@ public class TravelPlan {
             LocalDate day= entry.getKey();
             List<Attraction> attractions= entry.getValue();
             System.out.println("\u001B[32m"); // Cod pentru culoarea verde
-            System.out.println("Day: " + day);
+            System.out.println("Day: " + day + " " + day.getDayOfWeek());
             // Revenim la culoarea implicită
             System.out.print("\u001B[0m"); // Resetare la culoarea implicită
             //System.out.println("Attractions: ");

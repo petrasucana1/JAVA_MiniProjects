@@ -7,24 +7,24 @@ public class Main {
 
         //Set the timetable of each day of the week for each attraction
 
-        Map<DayOfWeek, TimeInterval<LocalTime>> church1Timetable = new HashMap<>();
+        Map<DayOfWeek, TimeInterval> church1Timetable = new HashMap<>();
         for(DayOfWeek day: DayOfWeek.values()){
-            church1Timetable.put(day, new TimeInterval<>(LocalTime.of(9,0),LocalTime.of(17,0)));
+            church1Timetable.put(day, new TimeInterval(LocalTime.of(9,0),LocalTime.of(17,0)));
         }
 
-        Map<DayOfWeek, TimeInterval<LocalTime>> church2Timetable = new HashMap<>();
+        Map<DayOfWeek, TimeInterval> church2Timetable = new HashMap<>();
         for(DayOfWeek day: DayOfWeek.values()){
-            church2Timetable.put(day, new TimeInterval<>(LocalTime.of(9,0),LocalTime.of(17,0)));
+            church2Timetable.put(day, new TimeInterval(LocalTime.of(9,0),LocalTime.of(17,0)));
         }
 
-        Map<DayOfWeek, TimeInterval<LocalTime>> statue1Timetable= new HashMap<>();
+        Map<DayOfWeek, TimeInterval> statue1Timetable= new HashMap<>();
         for(DayOfWeek day: DayOfWeek.values()){
-            statue1Timetable.put(day,new TimeInterval<>(LocalTime.of(8,30), LocalTime.of(14, 0)));
+            statue1Timetable.put(day,new TimeInterval(LocalTime.of(8,30), LocalTime.of(14, 0)));
         }
 
-        Map<DayOfWeek, TimeInterval<LocalTime>> statue2Timetable= new HashMap<>();
+        Map<DayOfWeek, TimeInterval> statue2Timetable= new HashMap<>();
         for(DayOfWeek day: DayOfWeek.values()){
-            statue2Timetable.put(day, new TimeInterval<>(LocalTime.of(10,0), LocalTime.of(19,30)));
+            statue2Timetable.put(day, new TimeInterval(LocalTime.of(10,0), LocalTime.of(19,30)));
         }
 
 
@@ -49,16 +49,16 @@ public class Main {
 
 
         //set the trip
-        Trip trip1=new Trip("New York",new TripPeriod<>(DayOfWeek.MONDAY, 6), attractions, 500.50);
+        Trip trip1=new Trip("New York",new TripPeriod(LocalDate.of(2024,3,18), 6), attractions, 500.50);
 
 
         //set a travel plan for the trip
         TravelPlan travelPlanTrip1= new TravelPlan(trip1);
-        DayOfWeek day=trip1.getPeriodOfTime().getStartDay();
+        LocalDate day=trip1.getPeriodOfTime().getStartDay();
         Integer count=0;
         while(count < trip1.getPeriodOfTime().getNumberOfDays()){
             travelPlanTrip1.addAttraction(day,trip1.getAttractions().get(count));
-            day=day.plus(1);
+            day=day.plusDays(1);
             count++;
         }
 

@@ -2,14 +2,16 @@ import java.time.DayOfWeek;
 import java.time.LocalTime;
 import java.util.*;
 
-public class Church extends Attraction implements Visitable{
-
+public class Statue extends Attraction implements Visitable {
     private Map<DayOfWeek, TimeInterval> timetable;
 
-    public Church(String town, String charchName, String description, Map<DayOfWeek, TimeInterval> timetable) {
-        super(town,charchName, description);
+    public Statue(String town, String statueName,String description,int colorCode, int popularity,  Map<DayOfWeek, TimeInterval> timetable) {
+        super(town,statueName, description, colorCode, popularity);
         this.timetable = timetable;
+
     }
+
+
 
     @Override
     public Map<DayOfWeek, TimeInterval> getVisitingTimetable() {
@@ -21,8 +23,8 @@ public class Church extends Attraction implements Visitable{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
-        Church church = (Church) o;
-        return Objects.equals(timetable, church.timetable);
+        Statue statue = (Statue) o;
+        return Objects.equals(timetable, statue.timetable);
     }
 
     @Override
@@ -32,7 +34,7 @@ public class Church extends Attraction implements Visitable{
 
     @Override
     public String toString() {
-        return "Church{" +
+        return "Statue{" +
                 "timetable=" + timetable +
                 '}';
     }

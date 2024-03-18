@@ -6,8 +6,8 @@ public class Church extends Attraction implements Visitable{
 
     private Map<DayOfWeek, TimeInterval> timetable;
 
-    public Church(String town, String charchName, String description, Map<DayOfWeek, TimeInterval> timetable) {
-        super(town,charchName, description);
+    public Church(String town, String charchName, String description,int colorCode, int popularity, Map<DayOfWeek, TimeInterval> timetable) {
+        super(town,charchName, description,colorCode, popularity);
         this.timetable = timetable;
     }
 
