@@ -10,8 +10,14 @@ import java.util.List;
 
 public class AuthorRepository {
 
-    private final EntityManager entityManager = ManagerFactory.getEntityManagerFactory().createEntityManager();
+    private EntityManager entityManager;
 
+    public AuthorRepository(){
+        entityManager = ManagerFactory.getEntityManagerFactory().createEntityManager();
+    }
+  /*  public AuthorRepository(String name){
+        entityManager = ManagerFactory.getEntityManagerFactory(name).createEntityManager();
+    }*/
     public void create(Author author) {
         EntityTransaction transaction = entityManager.getTransaction();
         transaction.begin();

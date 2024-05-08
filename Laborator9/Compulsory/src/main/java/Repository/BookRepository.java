@@ -10,7 +10,15 @@ import java.util.List;
 
 public class BookRepository {
 
-    private final EntityManager entityManager = ManagerFactory.getEntityManagerFactory().createEntityManager();
+    private  EntityManager entityManager;
+
+    public BookRepository(){
+        entityManager = ManagerFactory.getEntityManagerFactory().createEntityManager();
+    }
+
+  /*  public BookRepository(String name){
+        entityManager = ManagerFactory.getEntityManagerFactory(name).createEntityManager();
+    }*/
 
     public void create(Book book) {
         EntityTransaction transaction = entityManager.getTransaction();

@@ -1,4 +1,11 @@
-package tests;
+package org.example.Repository;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.*;
+
 
 import org.example.Entities.Author;
 import org.example.Repository.AuthorRepository;
@@ -31,7 +38,7 @@ public class AuthorRepositoryTest {
     }
 
     @Test
-    public void testCreateAuthor() {
+    public void create() {
         Author author = new Author("Test Author");
         authorRepository.create(author);
 
@@ -43,7 +50,7 @@ public class AuthorRepositoryTest {
     }
 
     @Test
-    public void testFindById() {
+    public void findById() {
         Author author = new Author("Test Author");
         entityManager.getTransaction().begin();
         entityManager.persist(author);
@@ -57,7 +64,7 @@ public class AuthorRepositoryTest {
     }
 
     @Test
-    public void testFindByName() {
+    public void findByName() {
         Author author1 = new Author("Test Author 1");
         Author author2 = new Author("Test Author 2");
         entityManager.getTransaction().begin();
@@ -71,3 +78,4 @@ public class AuthorRepositoryTest {
         assertEquals(2, authors.size());
     }
 }
+

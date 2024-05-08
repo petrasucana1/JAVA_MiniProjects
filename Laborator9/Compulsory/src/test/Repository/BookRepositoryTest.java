@@ -1,10 +1,11 @@
-package tests;
+package org.example.Repository;
+
+import org.junit.Test;
+import org.junit.After;
+import org.junit.Before;
 
 import org.example.Entities.Book;
 import org.example.Repository.BookRepository;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
@@ -32,8 +33,7 @@ public class BookRepositoryTest {
     }
 
     @Test
-    public void testCreateBook() {
-        // Create a new book
+    public void create() {
         Book book = new Book("Test Book", 1, 1, LocalDate.now(), "English");
         bookRepository.create(book);
 
@@ -45,7 +45,7 @@ public class BookRepositoryTest {
     }
 
     @Test
-    public void testFindById() {
+    public void findById() {
 
         Book book = new Book("Test Book", 1, 1, LocalDate.now(), "English");
         entityManager.getTransaction().begin();
@@ -62,7 +62,7 @@ public class BookRepositoryTest {
     }
 
     @Test
-    public void testFindByName() {
+    public void findByName() {
         Book book1 = new Book("Test Book 1", 1, 1, LocalDate.now(), "English");
         Book book2 = new Book("Test Book 2", 1, 1, LocalDate.now(), "English");
         entityManager.getTransaction().begin();

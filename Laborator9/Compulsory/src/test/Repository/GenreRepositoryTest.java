@@ -1,12 +1,11 @@
-package tests;
+package org.example.Repository;
 
-
-import org.example.Entities.Genre;
-import org.example.Repository.GenreRepository;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
+import static org.junit.Assert.*;
+import org.example.Entities.Genre;
+import org.example.Repository.GenreRepository;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
@@ -32,7 +31,7 @@ public class GenreRepositoryTest {
     }
 
     @Test
-    public void testCreateGenre() {
+    public void create() {
         Genre genre = new Genre("Test Genre");
         genreRepository.create(genre);
 
@@ -45,7 +44,7 @@ public class GenreRepositoryTest {
     }
 
     @Test
-    public void testFindById() {
+    public void findById() {
         Genre genre = new Genre("Test Genre");
         entityManager.getTransaction().begin();
         entityManager.persist(genre);
@@ -59,7 +58,7 @@ public class GenreRepositoryTest {
     }
 
     @Test
-    public void testFindByName() {
+    public void findByName() {
 
         Genre genre1 = new Genre("Test Genre 1");
         Genre genre2 = new Genre("Test Genre 2");

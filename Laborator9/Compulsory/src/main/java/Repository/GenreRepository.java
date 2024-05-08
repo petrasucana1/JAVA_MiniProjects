@@ -10,7 +10,15 @@ import java.util.List;
 
 public class GenreRepository {
 
-    private final EntityManager entityManager = ManagerFactory.getEntityManagerFactory().createEntityManager();
+    private  EntityManager entityManager;
+
+    public GenreRepository(){
+        entityManager = ManagerFactory.getEntityManagerFactory().createEntityManager();
+    }
+
+ /*   public GenreRepository(String name){
+        entityManager = ManagerFactory.getEntityManagerFactory(name).createEntityManager();
+    }*/
 
     public void create(Genre genre) {
         EntityTransaction transaction = entityManager.getTransaction();
