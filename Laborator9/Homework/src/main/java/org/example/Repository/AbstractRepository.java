@@ -64,6 +64,49 @@ public abstract class AbstractRepository<T, ID extends Serializable> {
         }
     }
 
+    public void delete(ID id) {
+        long startTime = System.currentTimeMillis();
+        EntityTransaction transaction = entityManager.getTransaction();
+        try {
+            transaction.begin();
+            T entity = entityManager.find(getEntityClass(), id);
+            if (entity != null) {
+                entityManager.remove(entity);
+                transaction.commit();
+                LoggerConfig.getLogger().log(Level.INFO, "Entity deleted successfully: {0}", entity.toString());
+            } else {
+                LoggerConfig.getLogger().log(Level.WARNING, "Entity with id " + id + " not found for deletion");
+            }
+            long endTime = System.currentTimeMillis();
+            long executionTime = endTime - startTime;
+            LoggerConfig.getLogger().log(Level.INFO, "DELETE executed in: " + executionTime + " milliseconds");
+        } catch (Exception e) {
+            if (transaction.isActive()) {
+                transaction.rollback();
+            }
+            LoggerConfig.getLogger().log(Level.SEVERE, "Failed to delete entity: " + e.getMessage(), e);
+        }
+    }
+
+    public void update(T entity) {
+        long startTime = System.currentTimeMillis();
+        EntityTransaction transaction = entityManager.getTransaction();
+        try {
+            transaction.begin();
+            entityManager.merge(entity);
+            transaction.commit();
+            LoggerConfig.getLogger().log(Level.INFO, "Entity updated successfully: {0}", entity.toString());
+            long endTime = System.currentTimeMillis();
+            long executionTime = endTime - startTime;
+            LoggerConfig.getLogger().log(Level.INFO, "UPDATE executed in: " + executionTime + " milliseconds");
+        } catch (Exception e) {
+            if (transaction.isActive()) {
+                transaction.rollback();
+            }
+            LoggerConfig.getLogger().log(Level.SEVERE, "Failed to update entity: " + e.getMessage(), e);
+        }
+    }
+
     public void closeEntityManager() {
         entityManager.close();
         LoggerConfig.getLogger().log(Level.INFO, "Entity manager closed");
