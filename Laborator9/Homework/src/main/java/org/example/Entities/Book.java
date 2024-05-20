@@ -1,4 +1,4 @@
-package org.example.Entities;
+package org.example.entities;
 
 import org.example.LoggerConfig;
 

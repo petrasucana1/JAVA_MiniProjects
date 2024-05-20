@@ -1,6 +1,6 @@
-package org.example.Repository;
+package org.example.repository;
 
-import org.example.Entities.Author;
+import org.example.entities.Author;
 
 import javax.persistence.Query;
 import java.util.List;

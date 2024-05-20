@@ -1,4 +1,4 @@
-package org.example.Repository;
+package org.example.repository;
 
 import org.junit.After;
 import org.junit.Before;

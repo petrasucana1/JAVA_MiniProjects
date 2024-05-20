@@ -1,4 +1,4 @@
-package org.example.Entities;
+package org.example.entities;
 
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;

@@ -1,8 +1,8 @@
-package org.example.Repository;
+package org.example.repository;
 
-import org.example.Entities.Book;
-import org.example.Entities.Genre;
-import org.example.Entities.PublishingHouse;
+import org.example.entities.Book;
+import org.example.entities.Genre;
+import org.example.entities.PublishingHouse;
 
 import javax.persistence.Query;
 import java.util.List;
