@@ -1,0 +1,290 @@
+{
+	"info": {
+		"_postman_id": "3d9e1007-340f-4bed-bb3a-5ddcc6075f15",
+		"name": "LibraryAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35028717"
+	},
+	"item": [
+		{
+			"name": "AuthorsList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/authors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"authors"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "exemple",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/authors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"authors"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 24 May 2024 10:34:39 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"J.K. Rowling/Mary GrandPrÃ©\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"J.K. Rowling\"\n    },\n    {\n        \"id\": 3,\n        \"name\": \"W. Frederick Zimmerman\"\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Douglas Adams\"\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Douglas Adams/Stephen Fry\"\n    },\n    {\n        \"id\": 6,\n        \"name\": \"Bill Bryson\"\n    },\n    {\n        \"id\": 7,\n        \"name\": \"Dan Brown\"\n    },\n    {\n        \"id\": 8,\n        \"name\": \"Stieg Larsson\"\n    },\n    {\n        \"id\": 9,\n        \"name\": \"David Lagercrantz\"\n    },\n    {\n        \"id\": 10,\n        \"name\": \"J.R.R. Tolkien\"\n    },\n    {\n        \"id\": 11,\n        \"name\": \"Harper Lee\"\n    },\n    {\n        \"id\": 12,\n        \"name\": \"George Orwell\"\n    },\n    {\n        \"id\": 13,\n        \"name\": \"Aldous Huxley\"\n    },\n    {\n        \"id\": 14,\n        \"name\": \"Ray Bradbury\"\n    },\n    {\n        \"id\": 15,\n        \"name\": \"J.D. Salinger\"\n    },\n    {\n        \"id\": 16,\n        \"name\": \"F. Scott Fitzgerald\"\n    },\n    {\n        \"id\": 17,\n        \"name\": \"Jane Austen\"\n    },\n    {\n        \"id\": 18,\n        \"name\": \"Charlotte BrontÃ«\"\n    },\n    {\n        \"id\": 19,\n        \"name\": \"Emily BrontÃ«\"\n    },\n    {\n        \"id\": 20,\n        \"name\": \"Anne BrontÃ«\"\n    },\n    {\n        \"id\": 21,\n        \"name\": \"Louisa May Alcott\"\n    },\n    {\n        \"id\": 22,\n        \"name\": \"Mark Twain\"\n    },\n    {\n        \"id\": 23,\n        \"name\": \"Robert Louis Stevenson\"\n    },\n    {\n        \"id\": 24,\n        \"name\": \"Bram Stoker\"\n    },\n    {\n        \"id\": 25,\n        \"name\": \"Mary Shelley\"\n    },\n    {\n        \"id\": 26,\n        \"name\": \"Oscar Wilde\"\n    },\n    {\n        \"id\": 27,\n        \"name\": \"Fyodor Dostoyevsky\"\n    },\n    {\n        \"id\": 28,\n        \"name\": \"Leo Tolstoy\"\n    },\n    {\n        \"id\": 29,\n        \"name\": \"Victor Hugo\"\n    },\n    {\n        \"id\": 30,\n        \"name\": \"Alexandre Dumas\"\n    },\n    {\n        \"id\": 31,\n        \"name\": \"Gustave Flaubert\"\n    },\n    {\n        \"id\": 32,\n        \"name\": \"Miguel de Cervantes\"\n    },\n    {\n        \"id\": 33,\n        \"name\": \"Gabriel GarcÃ\\u00ada MÃ¡rquez\"\n    },\n    {\n        \"id\": 34,\n        \"name\": \"Paulo Coelho\"\n    },\n    {\n        \"id\": 35,\n        \"name\": \"Margaret Atwood\"\n    },\n    {\n        \"id\": 36,\n        \"name\": \"John Steinbeck\"\n    },\n    {\n        \"id\": 37,\n        \"name\": \"Herman Melville\"\n    },\n    {\n        \"id\": 38,\n        \"name\": \"Umberto Eco\"\n    },\n    {\n        \"id\": 39,\n        \"name\": \"Dante Alighieri\"\n    },\n    {\n        \"id\": 40,\n        \"name\": \"Yann Martel\"\n    },\n    {\n        \"id\": 41,\n        \"name\": \"Suzanne Collins\"\n    },\n    {\n        \"id\": 42,\n        \"name\": \"Frank Herbert\"\n    },\n    {\n        \"id\": 43,\n        \"name\": \"Virginia Woolf\"\n    },\n    {\n        \"id\": 44,\n        \"name\": \"Goswami Jaideva\"\n    },\n    {\n        \"id\": 45,\n        \"name\": \"Foreman John\"\n    },\n    {\n        \"id\": 46,\n        \"name\": \"Hawking Stephen\"\n    },\n    {\n        \"id\": 47,\n        \"name\": \"Dubner Stephen\"\n    },\n    {\n        \"id\": 48,\n        \"name\": \"Said Edward\"\n    },\n    {\n        \"id\": 49,\n        \"name\": \"Vapnik Vladimir\"\n    },\n    {\n        \"id\": 50,\n        \"name\": \"Menon V P\"\n    },\n    {\n        \"id\": 51,\n        \"name\": \"Mlodinow Leonard\"\n    },\n    {\n        \"id\": 52,\n        \"name\": \"Shih Frank\"\n    },\n    {\n        \"id\": 53,\n        \"name\": \"Konnikova Maria\"\n    },\n    {\n        \"id\": 54,\n        \"name\": \"Sebastian Gutierrez\"\n    },\n    {\n        \"id\": 55,\n        \"name\": \"Vonnegut Kurt\"\n    },\n    {\n        \"id\": 56,\n        \"name\": \"Villani Cedric\"\n    },\n    {\n        \"id\": 57,\n        \"name\": \"Sussman Gerald\"\n    },\n    {\n        \"id\": 58,\n        \"name\": \"Eraly Abraham\"\n    },\n    {\n        \"id\": 59,\n        \"name\": \"Kafka Frank\"\n    },\n    {\n        \"id\": 60,\n        \"name\": \"Pratt John\"\n    },\n    {\n        \"id\": 61,\n        \"name\": \"Nisbet Robert\"\n    },\n    {\n        \"id\": 62,\n        \"name\": \"Wells H. G.\"\n    },\n    {\n        \"id\": 63,\n        \"name\": \"Heisenberg Werner\"\n    },\n    {\n        \"id\": 64,\n        \"name\": \"Oram Andy\"\n    },\n    {\n        \"id\": 65,\n        \"name\": \"Tao Terence\"\n    },\n    {\n        \"id\": 66,\n        \"name\": \"Conway Drew\"\n    },\n    {\n        \"id\": 67,\n        \"name\": \"Silver Nate\"\n    },\n    {\n        \"id\": 68,\n        \"name\": \"McKinney Wes\"\n    },\n    {\n        \"id\": 69,\n        \"name\": \"Cormen Thomas\"\n    },\n    {\n        \"id\": 70,\n        \"name\": \"Deb Siddhartha\"\n    },\n    {\n        \"id\": 71,\n        \"name\": \"Camus Albert\"\n    },\n    {\n        \"id\": 72,\n        \"name\": \"Doyle Arthur Conan\"\n    },\n    {\n        \"id\": 73,\n        \"name\": \"Smith Adam\"\n    },\n    {\n        \"id\": 74,\n        \"name\": \"Follett Ken\"\n    },\n    {\n        \"id\": 75,\n        \"name\": \"Hitler Adolf\"\n    },\n    {\n        \"id\": 76,\n        \"name\": \"Capra Fritjof\"\n    },\n    {\n        \"id\": 77,\n        \"name\": \"Feynman Richard\"\n    },\n    {\n        \"id\": 78,\n        \"name\": \"Hemingway Ernest\"\n    },\n    {\n        \"id\": 79,\n        \"name\": \"Forsyth Frederick\"\n    },\n    {\n        \"id\": 80,\n        \"name\": \"Archer Jeffery\"\n    },\n    {\n        \"id\": 81,\n        \"name\": \"Pausch Randy\"\n    },\n    {\n        \"id\": 82,\n        \"name\": \"Rand Ayn\"\n    },\n    {\n        \"id\": 83,\n        \"name\": \"Crichton Michael\"\n    },\n    {\n        \"id\": 84,\n        \"name\": \"Steinbeck John\"\n    },\n    {\n        \"id\": 85,\n        \"name\": \"Poe Edgar Allen\"\n    },\n    {\n        \"id\": 86,\n        \"name\": \"Dawkins Richard\"\n    },\n    {\n        \"id\": 87,\n        \"name\": \"Singh Simon\"\n    },\n    {\n        \"id\": 88,\n        \"name\": \"Mukherjee Siddhartha\"\n    },\n    {\n        \"id\": 89,\n        \"name\": \"Kuhn Thomas\"\n    },\n    {\n        \"id\": 90,\n        \"name\": \"Sagan Carl\"\n    },\n    {\n        \"id\": 91,\n        \"name\": \" Ackerman Jennifer\"\n    },\n    {\n        \"id\": 106,\n        \"name\": \"John Doe\"\n    },\n    {\n        \"id\": 107,\n        \"name\": \"John Doe\"\n    },\n    {\n        \"id\": 108,\n        \"name\": \"Test Author\"\n    },\n    {\n        \"id\": 109,\n        \"name\": \"Test Author\"\n    },\n    {\n        \"id\": 110,\n        \"name\": \"Test Author\"\n    },\n    {\n        \"id\": 111,\n        \"name\": \"Test Author\"\n    },\n    {\n        \"id\": 112,\n        \"name\": \"Test Author\"\n    },\n    {\n        \"id\": 113,\n        \"name\": \"Test Author\"\n    },\n    {\n        \"id\": 114,\n        \"name\": \"Test Author\"\n    },\n    {\n        \"id\": 115,\n        \"name\": \"Test Author\"\n    },\n    {\n        \"id\": 116,\n        \"name\": \"Test Author 1\"\n    },\n    {\n        \"id\": 117,\n        \"name\": \"Test Author 2\"\n    },\n    {\n        \"id\": 118,\n        \"name\": \"Test Author\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "BooksList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddBook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"title\": \"INFO\",\r\n        \"authorId\": 1,\r\n        \"genres\": [\"java\"],\r\n        \"publicationDate\": \"2006-09-16\",\r\n        \"language\": \"English\",\r\n        \"publishingHouse\": null\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"books"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "exemple",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"title\": \"INFO\",\r\n        \"authorId\": 1,\r\n        \"genres\": [\"java\"],\r\n        \"publicationDate\": \"2006-09-16\",\r\n        \"language\": \"English\",\r\n        \"publishingHouse\": null\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/books",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"books"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 24 May 2024 10:38:27 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 213,\n    \"title\": \"INFO\",\n    \"authorId\": 1,\n    \"genres\": [\n        {\n            \"id\": 60,\n            \"name\": \"java\",\n            \"books\": []\n        }\n    ],\n    \"publicationDate\": \"2006-09-16\",\n    \"language\": \"English\",\n    \"publishingHouse\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "UpdateBook",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"title\": \"INFO\",\r\n        \"authorId\": 2,\r\n        \"genres\": [\"java\"],\r\n        \"publicationDate\": \"2006-09-16\",\r\n        \"language\": \"English\",\r\n        \"publishingHouse\": null\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/books/213",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"books",
+						"213"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "exemple",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"title\": \"INFO\",\r\n        \"authorId\": 2,\r\n        \"genres\": [\"java\"],\r\n        \"publicationDate\": \"2006-09-16\",\r\n        \"language\": \"English\",\r\n        \"publishingHouse\": null\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/books/213",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"books",
+								"213"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 24 May 2024 10:40:42 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 213,\n    \"title\": \"INFO\",\n    \"authorId\": 2,\n    \"genres\": [\n        {\n            \"id\": 61,\n            \"name\": \"java\",\n            \"books\": []\n        }\n    ],\n    \"publicationDate\": \"2006-09-16\",\n    \"language\": \"English\",\n    \"publishingHouse\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "DeleteBook",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/books/212",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"books",
+						"212"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
